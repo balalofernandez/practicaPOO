@@ -19,5 +19,4 @@ public class PracticaPoo {
         a = "5";
         System.out.println(a);
     }
-    
 }
