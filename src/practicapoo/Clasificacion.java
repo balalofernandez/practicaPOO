@@ -36,7 +36,7 @@ public class Clasificacion {
         for (Usuario u: clasificacion){
            texto += i.toString()+") ";
             texto += u.toString()+"\n";
-            texto += "Las estadisticas del usuarios son"+ "\n";
+            texto += "Las estadisticas de los usuarios son"+ "\n";
             texto += u.mostrarEstadistica();
             texto += "\n";
             i++; 
