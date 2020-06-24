@@ -20,4 +20,16 @@ public class Tablero {
     public Tablero(Casilla[][] casillas){
         this.casillas = casillas;
     }
+    
+    public String pintarTablero(){
+        String aux="";
+        for(int i=0; i<max; i++){
+            for(int j=0; j<max;j++){
+                aux=aux + casillas[j][i].getStringPieza + ",";
+            }
+            aux=aux+"\n";
+        }
+     return aux;
+            
+    }
 }
