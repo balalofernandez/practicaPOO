@@ -104,6 +104,10 @@ public class Usuario implements Comparable{
         return x.compareTo(y);
     }
     
+    public boolean verSiResuelto(Problema p){
+        return this.problemasResueltos.contains(p);
+    }
+            
     public String mostrarEstadistica(){
         return ("El numero de problemas intentados es: "+problemas_intentados+"\n"+
             "El numero de problemas resueltos es: "+problemasResueltos.size()+"\n"+
