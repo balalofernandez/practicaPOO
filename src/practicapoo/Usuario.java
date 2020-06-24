@@ -5,6 +5,8 @@
  */
 package practicapoo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author balalo
@@ -13,17 +15,17 @@ public class Usuario {
     private String login;
     private String password;
     private int problemas_intentados;
-    private int problemas_resueltos;
     private int errores;
     private double porcentaje_exito;
+    private ArrayList<Problema> problemasResueltos;
     
     public Usuario(String nombre, String pwd){
         this.login = nombre;
         this.password = pwd;
         this.problemas_intentados = 0;
-        this.problemas_resueltos = 0;
         this.errores = 0;
         this.porcentaje_exito = 0;        
+        this.problemasResueltos = new ArrayList<>();
     }
     public Usuario(){
         this.login = "";
@@ -56,4 +58,41 @@ public class Usuario {
         return this.login;
     }
     
+    public int getProblemasIntentados (){
+        return this.problemas_intentados;
+    }
+    
+    public int getErrores (){
+        return this.errores;
+    }
+    
+    public double getPorcentageExito(){
+        return this.porcentaje_exito;
+    }
+    
+    public ArrayList<Problema> getProblemasResueltos(){
+        return this.problemasResueltos;
+    }
+    
+    public int getNumProblemasResueltos(){
+        return this.problemasResueltos.size();
+    }
+    
+    public void añadirIntentado(){
+        this.problemas_intentados++;
+    }
+    
+    public void añadirError(){
+        this.errores++;
+    }
+    
+    public void calculaPorcentajeExito(){
+        if (this.problemas_intentados!=0){
+            this.porcentaje_exito=(problemasResueltos.size()/problemas_intentados)*100;
+        }
+    }
+    
+    public void añadirProblemaResuelto (Problema problema){
+        this.problemasResueltos.add(problema);
+    }
 }
