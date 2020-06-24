@@ -28,6 +28,7 @@ public class Tablero {
             columna --;
             aux += columna;
             aux += "       ";
+            String a = "pepe";
             for(int j=0; j<max;j++){
                 
                 aux+= casillas[i][j].toString() + "       ";
