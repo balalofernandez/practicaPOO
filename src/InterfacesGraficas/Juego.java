@@ -128,7 +128,13 @@ public class Juego extends javax.swing.JDialog {
             AreaJuego.append("No se ha introducido nada");
         }
         solucion = solucion.toUpperCase();
-        if (!usuario.verSiResuelto(tablero)){
+        if (problema.solucionValida(solucion)){
+            AreaJuego.append("Bravo"+"\n");
+        }
+        else{
+            AreaJuego.append("OOOOOOOH"+"\n");
+        }
+        /*if (!usuario.verSiResuelto(tablero)){
             tablero.incrementarIntento();
             if (tablero.esSolCorrecta(solucion)== true){
                 AreaJuego.append("¡Enhorabuena, la solución es correcta!"+"\n");
@@ -149,6 +155,7 @@ public class Juego extends javax.swing.JDialog {
             }
             
         }
+        */
     }//GEN-LAST:event_EnviarBotonActionPerformed
 
     private void VolverBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverBotonActionPerformed
