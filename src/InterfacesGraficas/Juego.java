@@ -128,7 +128,6 @@ public class Juego extends javax.swing.JDialog {
         }
         solucion = solucion.toUpperCase();
         if (!usuario.verSiResuelto(problema)){
-            
             problema.incrementarIntento();
             if (problema.solucionValida(solucion)){
                 AreaJuego.append("¡Enhorabuena, la solución es correcta!"+"\n");
@@ -152,6 +151,7 @@ public class Juego extends javax.swing.JDialog {
 
     private void VolverBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverBotonActionPerformed
         usuario.calculaPorcentajeExito();
+        problema.setPorcentajeExito();
         this.dispose();  
     }//GEN-LAST:event_VolverBotonActionPerformed
     
