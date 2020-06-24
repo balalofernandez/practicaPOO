@@ -41,5 +41,6 @@ public class Clasificacion {
             texto += "\n";
             i++; 
         }
+        return texto;
     }
 }
