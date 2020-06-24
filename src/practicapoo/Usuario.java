@@ -104,4 +104,10 @@ public class Usuario implements Comparable{
         return x.compareTo(y);
     }
     
+    public String mostrarEstadistica(){
+        return ("El numero de problemas intentados es: "+problemas_intentados+"\n"+
+            "El numero de problemas resueltos es: "+problemasResueltos.size()+"\n"+
+            "El porcentaje de éxito del usuario es: "+porcentaje_exito);
+    }
+    
 }   

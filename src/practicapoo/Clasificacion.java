@@ -25,6 +25,21 @@ public class Clasificacion {
     }
     
     public void ordenadaResueltos(){
-        Collections.sort(clasificacion, )
+        ComparadorResueltos comparador= new ComparadorResueltos();
+        Collections.sort(clasificacion, comparador);
+    }
+    
+    @Override
+    public String toString (){
+        String texto="";
+        Integer i = 0;
+        for (Usuario u: clasificacion){
+           texto += i.toString()+") ";
+            texto += u.toString()+"\n";
+            texto += "Las estadisticas del usuarios son"+ "\n";
+            texto += u.mostrarEstadistica();
+            texto += "\n";
+            i++; 
+        }
     }
 }
