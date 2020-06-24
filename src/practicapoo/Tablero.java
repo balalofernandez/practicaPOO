@@ -27,8 +27,8 @@ public class Tablero {
         for(int i=0; i<max; i++){
             columna --;
             aux += columna;
-            aux += "       ";
             String a = "pepe";
+            aux += "  -       ";
             for(int j=0; j<max;j++){
                 
                 aux+= casillas[i][j].toString() + "       ";
