@@ -95,4 +95,4 @@ public class Usuario {
     public void añadirProblemaResuelto (Problema problema){
         this.problemasResueltos.add(problema);
     }
-}
+}   
