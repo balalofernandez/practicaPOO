@@ -16,5 +16,4 @@ public class Rey extends Pieza{
         super(SIMBOLO, color);
     }
     
-    
 }

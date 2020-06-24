@@ -18,4 +18,5 @@ public abstract class Pieza {
         this.color = color;
     }
     
+    
 }
