@@ -104,4 +104,8 @@ public class Usuario implements Comparable{
         return x.compareTo(y);
     }
     
+    public boolean verSiResuelto(Problema p){
+        return this.problemasResueltos.contains(p);
+    }
+            
 }   
