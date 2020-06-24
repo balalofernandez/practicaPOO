@@ -56,6 +56,19 @@ public class Problema {
         }
     }
     
+    public void incrementarIntento(){
+        this.numIntentos++;
+    }
+    
+    public void addResuelto(Usuario usu){
+        this.resuelto_por ++;
+        this.usuarios.add(usu);
+    }
+    
+    public ArrayList<Usuario> getUsuariosResuelto(){
+        return this.usuarios;
+    }
+    
     @Override
     public boolean equals(Object o){
         if (o==this)

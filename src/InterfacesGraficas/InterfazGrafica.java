@@ -404,19 +404,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
             UltimaOperacion.setText("No se ha metido ningun usuario");
         }
     }//GEN-LAST:event_JugarBotonActionPerformed
-    /*
+    
     private void EstadisticasPersonalesBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadisticasPersonalesBotonActionPerformed
         EstadisticasPersonales estadisticas = new EstadisticasPersonales(this,true,usuario);
         estadisticas.setVisible(true);
 //        estadisticas.mensaje(usuario);
     }//GEN-LAST:event_EstadisticasPersonalesBotonActionPerformed
-    */
-    /*
+    
+    
     private void EstadisticasProblemasBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadisticasProblemasBotonActionPerformed
-        EstadisticasProblemas estadisticas = new EstadisticasProblemas(this,true,sistema,usuario);
+        EstadisticasProblemas estadisticas = new EstadisticasProblemas(this,true,problemas,usuario);
         estadisticas.setVisible(true);
     }//GEN-LAST:event_EstadisticasProblemasBotonActionPerformed
-    */
+    
     /*
     private void ClasificacionBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClasificacionBotonActionPerformed
         ClasificacionInterfaz estadisticas = new ClasificacionInterfaz(this,true,clasificacion);
