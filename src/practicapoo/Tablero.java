@@ -23,10 +23,15 @@ public class Tablero {
     
     public String pintarTablero(){
         String aux="";
+        int columna = 9;
         for(int i=0; i<max; i++){
+            columna --;
+            aux += columna;
+            aux += "       ";
             for(int j=0; j<max;j++){
-                aux=aux + casillas[j][i].toString() + "       ";
-                if (casillas[j][i].toString().length()==1){
+                
+                aux+= casillas[i][j].toString() + "       ";
+                if (casillas[i][j].toString().length()==1){
                     aux=aux + "   ";
                 }
             }

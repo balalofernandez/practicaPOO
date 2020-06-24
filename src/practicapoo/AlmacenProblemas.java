@@ -62,8 +62,8 @@ public class AlmacenProblemas {
 
             if(this.validarProblema(subcaptura)){
                 for(int i= 0; i<max; i++){
-                    char fila = (char) ('a'+i);
                     for(int j=0; j<max; j++){
+                        char fila = (char) ('a'+i);
                         switch (subcaptura[i][j]){
                             case "V": //YA ESTAN EN MAYUSCULAS!! SOLO PONGO LAS MAYUSC.
                                 Pieza x = new Vacia();

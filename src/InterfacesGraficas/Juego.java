@@ -118,7 +118,7 @@ public class Juego extends javax.swing.JDialog {
     private void SolucionTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SolucionTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SolucionTextActionPerformed
-/*
+
     private void EnviarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarBotonActionPerformed
         String solucion = SolucionText.getText();
         String ultimoTramo = solucion.substring(solucion.length()-2, solucion.length());
@@ -150,7 +150,7 @@ public class Juego extends javax.swing.JDialog {
             
         }
     }//GEN-LAST:event_EnviarBotonActionPerformed
-*/
+
     private void VolverBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverBotonActionPerformed
 //        usuario.setporcentajeExito();
         this.dispose();  
