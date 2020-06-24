@@ -56,4 +56,16 @@ public class Problema {
         }
     }
     
+    @Override
+    public boolean equals(Object o){
+        if (o==this)
+            return true;
+        if (o==null)
+            return false;
+        if (this.getClass()!=o.getClass())
+            return false;
+        Problema problema = (Problema) o;
+        return (problema.equals(this));  
+    }
+    
 }
