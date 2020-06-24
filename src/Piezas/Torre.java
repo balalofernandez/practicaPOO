@@ -9,6 +9,11 @@ package Piezas;
  *
  * @author balalo
  */
-public class Torre {
+public class Torre extends Pieza{
+    private static final char SIMBOLO ='T';
+    
+    public Torre(Color color){
+        super(SIMBOLO, color);
+    }
     
 }

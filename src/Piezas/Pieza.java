@@ -17,6 +17,9 @@ public abstract class Pieza {
         this.letra = letra;
         this.color = color;
     }
+    public Pieza(char letra){
+        this.letra = letra;
+    }
     
     
 }

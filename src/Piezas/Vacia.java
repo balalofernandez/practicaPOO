@@ -3,20 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practicapoo;
+package Piezas;
 
 /**
  *
  * @author balalo
  */
-public class PracticaPoo {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        String a;
-        a = "5";
-        System.out.println(a);
+public class Vacia extends Pieza{
+    private static final char SIMBOLO ='V';
+    
+    public Vacia(){
+        super(SIMBOLO);
     }
+    
 }

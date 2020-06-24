@@ -1,0 +1,9 @@
+V,V,V,V,V,V,V,V
+V,V,V,PN,RN,PB,V,V
+V,V,V,V,PN,V,V,V
+V,V,V,V,V,V,V,V
+V,V,V,V,V,V,V,V
+V,V,V,RB,V,V,V,V
+V,V,V,V,V,V,V,V
+V,V,V,V,V,TB,V,V
+f8=D,f8
