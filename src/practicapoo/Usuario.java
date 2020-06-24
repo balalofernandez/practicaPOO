@@ -29,4 +29,25 @@ public class Usuario {
         this.login = "";
         this.password = "";
     }
+    
+    public String getNombre(){
+        return this.login;
+    }
+    public String getPassword(){
+        return this.password;
+    }
+    @Override
+    public boolean equals(Object o){
+        if(o == this){
+            return true;
+        }
+        if(o == null)
+            return false;
+        if(this.getClass() != o.getClass())
+            return false;
+        Usuario usuario = (Usuario) o;
+        return (usuario.getNombre().equals(this.getNombre()));                 
+            
+    }
+    
 }

@@ -27,4 +27,8 @@ public class Casilla {
         this.coordenadaY = coordenadaY;
         this.pieza = p;
     }
+    
+    public String getStringPieza(){
+        return Character.toString(this.pieza.getLetra());
+    }
 }

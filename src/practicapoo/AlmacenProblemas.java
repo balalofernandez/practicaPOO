@@ -30,6 +30,10 @@ public class AlmacenProblemas {
         problemas = new ArrayList<>();
     }
     
+    public ArrayList<Problema> getProblemas(){
+        return this.problemas;
+    }
+    
     public void subirProblema(String fichero)throws java.io.FileNotFoundException, TablaNoValidaException{// En vez de pasar un problema, pasamos directamente la ruta 
         try {
             FileReader fr= new FileReader(fichero);
@@ -131,9 +135,8 @@ public class AlmacenProblemas {
                 }
             Tablero t = new Tablero(tablero);
             Problema problema = new Problema(t, soluciones);
+            this.problemas.add(problema);
             }
-            
-            
             else{
                 throw new TablaNoValidaException(); 
                     }

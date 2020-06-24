@@ -21,5 +21,9 @@ public abstract class Pieza {
         this.letra = letra;
     }
     
+    public char getLetra(){
+        return this.letra;
+    }
+    
     
 }
