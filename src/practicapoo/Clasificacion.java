@@ -6,6 +6,7 @@
 package practicapoo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -19,6 +20,11 @@ public class Clasificacion {
         this.clasificacion = new ArrayList<>();
     } 
     
-    public void insertUsuario (Usuario:)
+    public void ordenadaPorcentaje(){
+        Collections.sort(clasificacion);
+    }
     
+    public void ordenadaResueltos(){
+        Collections.sort(clasificacion, )
+    }
 }
