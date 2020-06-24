@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author balalo
  */
-public class Usuario {
+public class Usuario implements Comparable{
     private String login;
     private String password;
     private int problemas_intentados;
@@ -95,4 +95,13 @@ public class Usuario {
     public void añadirProblemaResuelto (Problema problema){
         this.problemasResueltos.add(problema);
     }
+    
+    @Override
+    public int compareTo(Object o){
+        Usuario usu = (Usuario) o;
+        Double x = this.getPorcentageExito();
+        Double y = usu.getPorcentageExito();
+        return x.compareTo(y);
+    }
+    
 }   
