@@ -5,6 +5,8 @@
  */
 package Piezas;
 
+import static Piezas.Color.*;
+
 /**
  *
  * @author balalo
@@ -21,8 +23,16 @@ public abstract class Pieza {
         this.letra = letra;
     }
     
-    public char getLetra(){
-        return this.letra;
+    @Override
+    public String toString(){
+        String aux = Character.toString(this.letra);
+        if (this.color == BLANCA){
+            return aux+"B";
+        }
+        if (this.color == NEGRA){
+            return aux+"N";
+        }
+        return aux;
     }
     
     

@@ -28,7 +28,8 @@ public class Casilla {
         this.pieza = p;
     }
     
-    public String getStringPieza(){
-        return Character.toString(this.pieza.getLetra());
+    @Override
+    public String toString(){
+        return this.pieza.toString();
     }
 }
