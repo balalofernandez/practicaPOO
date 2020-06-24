@@ -25,7 +25,7 @@ public class Tablero {
         String aux="";
         for(int i=0; i<max; i++){
             for(int j=0; j<max;j++){
-                aux=aux + casillas[j][i].getStringPieza + ",";
+                aux=aux + casillas[j][i].getStringPieza() + ",";
             }
             aux=aux+"\n";
         }

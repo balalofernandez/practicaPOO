@@ -20,6 +20,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     AlmacenProblemas problemas;
     Login usuarios;
+    Usuario usuario;
 //    Clasificacion clasificacion;
     /**
      * Creates new form InterfazGráfica
@@ -343,9 +344,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
             String nombreUsu = usuario.getNombre();
             String contraseñaUsu = usuario.getContraseña();
             Usuario usu = new Usuario(nombreUsu, contraseñaUsu);
-            sistema.añadirUsuario(usu);// TODO add your handling code here:
+            usuarios.registrar(usu);// TODO add your handling code here:
             UltimaOperacion.setText ("Ultima operacion: usuario creado");
-            clasificacion.AñadirUsu(usu);
+//            clasificacion.AñadirUsu(usu);
             this.usuario = usu;
             NombreUsuarioText.setText(usu.toString());
         }
@@ -366,7 +367,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         String contraseñaUsu = sesion.getContraseña();
         
         try{
-            Usuario usu = sistema.autenticar(nombreUsu, contraseñaUsu);
+            Usuario usu = new Usuario(nombreUsu,contraseñaUsu);
+            this.usuarios.autenticar(usu);
             this.usuario = usu;
             NombreUsuarioText.setText(usu.toString());
             UltimaOperacion.setText ("Ultima operacion: sesion iniciada");
@@ -381,44 +383,47 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void CajaConTablerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CajaConTablerosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CajaConTablerosActionPerformed
-
+    
     private void JugarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JugarBotonActionPerformed
         try{
-            Usuario usu = sistema.autenticar(usuario.getNombre(), usuario.getPassword());
-            ArrayList<Tablero> tableros = sistema.getTableros();
+            usuarios.autenticar(this.usuario);
+            ArrayList<Problema> p = problemas.getProblemas();
             int opcion = CajaConTableros.getSelectedIndex();//vemos la opcion que se toma en la ComboBox
-            Tablero tablero;//inicializamos
+            Problema problemaOpcion;
             if (opcion == 0){
                 int random = (int) (Math.random() * 10);
-                tablero = tableros.get(random);
+                problemaOpcion = p.get(random);
             }
             else{
-                tablero = tableros.get(opcion-1);}//como el primer indice va a ser el 1 cojo el x-1
+                problemaOpcion = p.get(opcion-1);}//como el primer indice va a ser el 1 cojo el x-1
             Juego juego = new Juego(this,true);
-            juego.Jugar(tablero, usuario);
+            juego.Jugar(problemaOpcion, usuario);
             juego.setVisible(true);//NO PERMITIR QUE JUEGUE SI NO HAY USUARIO
         }
         catch(UsuarioNoEncontradoException a){
             UltimaOperacion.setText("No se ha metido ningun usuario");
         }
     }//GEN-LAST:event_JugarBotonActionPerformed
-
+    /*
     private void EstadisticasPersonalesBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadisticasPersonalesBotonActionPerformed
         EstadisticasPersonales estadisticas = new EstadisticasPersonales(this,true,usuario);
         estadisticas.setVisible(true);
 //        estadisticas.mensaje(usuario);
     }//GEN-LAST:event_EstadisticasPersonalesBotonActionPerformed
-
+    */
+    /*
     private void EstadisticasProblemasBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadisticasProblemasBotonActionPerformed
         EstadisticasProblemas estadisticas = new EstadisticasProblemas(this,true,sistema,usuario);
         estadisticas.setVisible(true);
     }//GEN-LAST:event_EstadisticasProblemasBotonActionPerformed
-
+    */
+    /*
     private void ClasificacionBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClasificacionBotonActionPerformed
         ClasificacionInterfaz estadisticas = new ClasificacionInterfaz(this,true,clasificacion);
         estadisticas.setVisible(true);
     }//GEN-LAST:event_ClasificacionBotonActionPerformed
-
+    */
+    /*
     private void SubirProblemaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubirProblemaBotonActionPerformed
     try{
         String nombreArchivo = SubirProblemaText.getText();
@@ -434,7 +439,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
             UltimaOperacion.setText("No se ha podido añadir");
         }
     }//GEN-LAST:event_SubirProblemaBotonActionPerformed
-
+    */
+    /*
     private void GuardarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarBotonActionPerformed
         String nombreArchivo = NombreGuardarArchivo.getText();
 //        String ultimoTramo = nombreArchivo.substring(nombreArchivo.length()-4, nombreArchivo.length());
@@ -456,7 +462,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
             UltimaOperacion.setText("No se ha podido guardar");
         }
     }//GEN-LAST:event_GuardarBotonActionPerformed
-
+    */
+    /*
     private void SubirBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubirBotonActionPerformed
         try{
         FileInputStream FileLeer = new FileInputStream(NombreSubirArchivo.getText());
@@ -474,7 +481,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         
     }//GEN-LAST:event_SubirBotonActionPerformed
-
+    */
     /**
      * @param args the command line arguments
      */

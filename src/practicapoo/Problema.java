@@ -34,4 +34,7 @@ public class Problema {
         this.jugada_ganadora = jugada;
     }
     
+    public Tablero getTablero(){
+        return this.tablero;
+    }
 }

@@ -29,20 +29,20 @@ public class Login {
         }
     }
     
-    public boolean autenticar(Usuario u){
+    public boolean autenticar(Usuario u) throws UsuarioNoEncontradoException{
         if (this.usuarios.contains(u)){
             Iterator i = this.usuarios.iterator();
             boolean encontrado = false;
+            Usuario usu = new Usuario();
             while (i.hasNext() && !encontrado){
-                Usuario usu = (Usuario) i.next();
+                usu = (Usuario) i.next();
                 if(usu.equals(u))
                     encontrado = true;
             }
-            Usuario usu = (Usuario) i;
             return encontrado && usu.getPassword().equals(u.getPassword());
         }
         else
-            return false;
+            throw new UsuarioNoEncontradoException();
     }
     
     public ArrayList<Usuario> getUsuarios(){

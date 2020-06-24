@@ -36,6 +36,7 @@ public class Usuario {
     public String getPassword(){
         return this.password;
     }
+    
     @Override
     public boolean equals(Object o){
         if(o == this){
@@ -48,6 +49,11 @@ public class Usuario {
         Usuario usuario = (Usuario) o;
         return (usuario.getNombre().equals(this.getNombre()));                 
             
+    }
+    
+    @Override
+    public String toString(){
+        return this.login;
     }
     
 }
