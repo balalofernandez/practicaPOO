@@ -104,8 +104,17 @@ public class Usuario implements Comparable{
         return x.compareTo(y);
     }
     
+<<<<<<< HEAD
     public boolean verSiResuelto(Problema p){
         return this.problemasResueltos.contains(p);
     }
             
+=======
+    public String mostrarEstadistica(){
+        return ("El numero de problemas intentados es: "+problemas_intentados+"\n"+
+            "El numero de problemas resueltos es: "+problemasResueltos.size()+"\n"+
+            "El porcentaje de éxito del usuario es: "+porcentaje_exito);
+    }
+    
+>>>>>>> ecc0697d6478bbcb19453fd65ce52e2e195dd5bc
 }   
