@@ -29,6 +29,10 @@ public class Clasificacion {
         Collections.sort(clasificacion, comparador);
     }
     
+    public ArrayList<Usuario> getUsuarios(){
+        return this.clasificacion;
+    }
+    
     @Override
     public String toString (){
         String texto="";

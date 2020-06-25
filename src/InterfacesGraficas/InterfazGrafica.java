@@ -21,7 +21,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     AlmacenProblemas problemas;
     Login usuarios;
     Usuario usuario;
-//    Clasificacion clasificacion;
+    Clasificacion clasificacion;
     /**
      * Creates new form InterfazGráfica
      */
@@ -52,7 +52,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         catch (TablaNoValidaException ex) {
             UltimaOperacion.setText("Hay un tablero mal");
         }
-//        clasificacion= new Clasificacion();
+       clasificacion= new Clasificacion();
     }
         
 
@@ -91,6 +91,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         SubirBoton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 255, 102));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Sistema"));
 
@@ -417,12 +418,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
         estadisticas.setVisible(true);
     }//GEN-LAST:event_EstadisticasProblemasBotonActionPerformed
     
-    /*
+    
     private void ClasificacionBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClasificacionBotonActionPerformed
         ClasificacionInterfaz estadisticas = new ClasificacionInterfaz(this,true,clasificacion);
         estadisticas.setVisible(true);
     }//GEN-LAST:event_ClasificacionBotonActionPerformed
-    */
+    
     /*
     private void SubirProblemaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubirProblemaBotonActionPerformed
     try{

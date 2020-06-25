@@ -166,7 +166,7 @@ public class Juego extends javax.swing.JDialog {
         if (usuario.verSiResuelto(problema))
             AreaJuego.append("Este problema ya se ha jugado"+"\n"+"\n");
         else
-            usuario.añadirIntentado();//ver si tiene que ser el numero total de problemas intentados
+            usuario.añadirIntentado();//No calculamos si se ha intentado antes
         AreaJuego.append(problema.getTablero().pintarTablero()+"\n");
         AreaJuego.setEditable(false);
         

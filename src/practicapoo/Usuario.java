@@ -88,7 +88,7 @@ public class Usuario implements Comparable{
     
     public void calculaPorcentajeExito(){
         if (this.problemas_intentados!=0){
-            this.porcentaje_exito=(problemasResueltos.size()/problemas_intentados)*100;
+            this.porcentaje_exito=(problemasResueltos.size()*100)/problemas_intentados;
         }
     }
     

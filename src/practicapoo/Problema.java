@@ -52,7 +52,7 @@ public class Problema {
     }
     public void setPorcentajeExito(){
         if (this.numIntentos != 0){
-            this.porcentaje_exito = (this.resuelto_por / this.numIntentos) *100;
+            this.porcentaje_exito = (this.resuelto_por *100)/ this.numIntentos;
         }
     }
     
