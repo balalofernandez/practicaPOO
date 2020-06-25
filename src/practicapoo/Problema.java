@@ -78,7 +78,7 @@ public class Problema {
         if (this.getClass()!=o.getClass())
             return false;
         Problema problema = (Problema) o;
-        return (problema.equals(this));  
+        return (problema.getTablero().equals(this.getTablero()));  
     }
     
 }
