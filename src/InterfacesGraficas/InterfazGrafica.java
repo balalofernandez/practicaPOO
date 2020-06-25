@@ -454,6 +454,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
 
             Output.writeObject(usuarios);
+            Output.writeObject(problemas);
+            Output.writeObject(clasificacion);
             Output.close();
             UltimaOperacion.setText("Se ha guardado el archivo correctamente");
     
@@ -469,6 +471,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         ObjectInputStream Input = new ObjectInputStream(FileLeer);
         
         usuarios = (Login) Input.readObject();
+        problemas = (AlmacenProblemas) Input.readObject();
+        clasificacion = (Clasificacion) Input.readObject();
         Input.close();
         UltimaOperacion.setText("Se ha subido correctamente");
         }
