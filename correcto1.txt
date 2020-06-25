@@ -1,0 +1,9 @@
+TB,V,V,TN,RN,V,V,V
+PN,V,PN,V,PN,V,V,CB
+V,V,V,V,V,V,PB,V
+V,V,CN,AB,V,V,V,V
+V,V,V,V,V,V,DB,AB
+AN,V,V,V,V,V,V,V
+V,V,V,V,V,V,V,V
+V,V,V,RB,V,V,V,V
+Af7
