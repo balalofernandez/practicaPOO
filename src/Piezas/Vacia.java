@@ -5,11 +5,13 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Vacia extends Pieza{
+public class Vacia extends Pieza implements Serializable{
     private static final char SIMBOLO ='V';
     
     public Vacia(){

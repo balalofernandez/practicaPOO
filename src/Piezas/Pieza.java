@@ -6,12 +6,13 @@
 package Piezas;
 
 import static Piezas.Color.*;
+import java.io.Serializable;
 
 /**
  *
  * @author balalo
  */
-public abstract class Pieza {
+public abstract class Pieza implements Serializable{
     private char letra;
     private Color color;
     

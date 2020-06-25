@@ -5,11 +5,13 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Torre extends Pieza{
+public class Torre extends Pieza implements Serializable{
     private static final char SIMBOLO ='T';
     
     public Torre(Color color){

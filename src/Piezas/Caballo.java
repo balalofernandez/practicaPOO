@@ -5,11 +5,13 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Caballo extends Pieza{
+public class Caballo extends Pieza implements Serializable{
     private static final char SIMBOLO ='C';
     
     public Caballo(Color color){

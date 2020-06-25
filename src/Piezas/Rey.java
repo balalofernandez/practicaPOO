@@ -5,11 +5,13 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Rey extends Pieza{
+public class Rey extends Pieza implements Serializable{
     private static final char SIMBOLO ='R';
     
     public Rey(Color color){

@@ -5,11 +5,13 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Alfil extends Pieza{
+public class Alfil extends Pieza implements Serializable{
     private static final char SIMBOLO ='A';
     
     public Alfil(Color color){

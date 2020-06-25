@@ -5,11 +5,13 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Peon extends Pieza{
+public class Peon extends Pieza implements Serializable{
     private static final char SIMBOLO ='P';
     
     public Peon(Color color){

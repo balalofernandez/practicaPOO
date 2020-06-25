@@ -5,8 +5,10 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public enum Color {BLANCA, NEGRA};
+public enum Color implements Serializable{BLANCA, NEGRA};

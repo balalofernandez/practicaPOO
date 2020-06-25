@@ -5,11 +5,13 @@
  */
 package Piezas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Dama extends Pieza{
+public class Dama extends Pieza implements Serializable{
     private static final char SIMBOLO ='D';
     
     public Dama(Color color){
