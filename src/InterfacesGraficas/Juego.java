@@ -14,7 +14,6 @@ import practicapoo.*;
 public class Juego extends javax.swing.JDialog {
     Problema problema;
     Usuario usuario;
-    //Sistema sistema;
     /**
      * Creates new form Juego
         AreaJuego.append(tablero.mostrarTablero());
@@ -128,38 +127,31 @@ public class Juego extends javax.swing.JDialog {
             AreaJuego.append("No se ha introducido nada");
         }
         solucion = solucion.toUpperCase();
-        if (problema.solucionValida(solucion)){
-            AreaJuego.append("Bravo"+"\n");
-        }
-        else{
-            AreaJuego.append("OOOOOOOH"+"\n");
-        }
-        /*if (!usuario.verSiResuelto(tablero)){
-            tablero.incrementarIntento();
-            if (tablero.esSolCorrecta(solucion)== true){
+        if (!usuario.verSiResuelto(problema)){
+            problema.incrementarIntento();
+            if (problema.solucionValida(solucion)){
                 AreaJuego.append("¡Enhorabuena, la solución es correcta!"+"\n");
-                tablero.añadirUsuRes(usuario);
-                usuario.añadirProblemaR(tablero);
+                problema.addResuelto(usuario);
+                usuario.añadirProblemaResuelto(problema);
             }
             else{
                 AreaJuego.append("No has tenido suerte"+"\n"+"Intentalo de nuevo"+"\n");
-                usuario.incrementarError();
+                usuario.añadirError();
             }    
         }
         else{
-            if (tablero.esSolCorrecta(solucion)== true){
+            if (problema.solucionValida(solucion)){
                 AreaJuego.append("¡Enhorabuena, la solución es correcta!"+"\n");
             }
             else{
                 AreaJuego.append("No has tenido suerte"+"\n"+"Intentalo de nuevo"+"\n");
-            }
-            
+            }            
         }
-        */
     }//GEN-LAST:event_EnviarBotonActionPerformed
 
     private void VolverBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverBotonActionPerformed
-//        usuario.setporcentajeExito();
+        usuario.calculaPorcentajeExito();
+        problema.setPorcentajeExito();
         this.dispose();  
     }//GEN-LAST:event_VolverBotonActionPerformed
     
@@ -171,12 +163,10 @@ public class Juego extends javax.swing.JDialog {
     public void Jugar(Problema p, Usuario u){//Tengo que seguir por aqui
         problema = p;
         usuario = u;
-        /*
-        if (usuario.verSiResuelto(tablero))
+        if (usuario.verSiResuelto(problema))
             AreaJuego.append("Este problema ya se ha jugado"+"\n"+"\n");
         else
-            usuario.añadirProblemaI();//ver si tiene que ser el numero total de problemas intentados
-        */
+            usuario.añadirIntentado();//ver si tiene que ser el numero total de problemas intentados
         AreaJuego.append(problema.getTablero().pintarTablero()+"\n");
         AreaJuego.setEditable(false);
         
