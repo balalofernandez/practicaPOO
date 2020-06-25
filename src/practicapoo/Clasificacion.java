@@ -40,7 +40,7 @@ public class Clasificacion {
         for (Usuario u: clasificacion){
             texto += i.toString()+") ";
             texto += u.toString()+"\n";
-            texto += "Las estadisticas del usuario son"+ "\n";
+            texto += "Las estadisticas del usuario son:"+ "\n";
             texto += u.mostrarEstadistica();
             texto += "\n";
             i++; 

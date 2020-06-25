@@ -109,9 +109,9 @@ public class Usuario implements Comparable{
     }
             
     public String mostrarEstadistica(){
-        return ("El numero de problemas intentados es: "+problemas_intentados+"\n"+
-            "El numero de problemas resueltos es: "+problemasResueltos.size()+"\n"+
-            "El porcentaje de éxito del usuario es: "+porcentaje_exito);
+        return ("El numero de problemas intentados es: "+this.getProblemasIntentados()+"\n"+
+            "El numero de problemas resueltos es: "+this.getNumProblemasResueltos()+"\n"+
+            "El porcentaje de éxito del usuario es: "+this.getPorcentageExito());
     }
     
 }   

@@ -424,11 +424,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         estadisticas.setVisible(true);
     }//GEN-LAST:event_ClasificacionBotonActionPerformed
     
-    /*
+    
     private void SubirProblemaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubirProblemaBotonActionPerformed
     try{
         String nombreArchivo = SubirProblemaText.getText();
-        sistema.añadirTablero(nombreArchivo);
+        problemas.subirProblema(nombreArchivo);
         CajaConTableros.addItem(nombreArchivo);
         UltimaOperacion.setText("Se ha subido el problema");
         
@@ -437,10 +437,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
         UltimaOperacion.setText("No se ha podido guardar el archivo");
     }   
     catch (TablaNoValidaException ex) {
-            UltimaOperacion.setText("No se ha podido añadir");
+            UltimaOperacion.setText("No se ha podido añadir, posiblemente el formato no sea el adecuado");
         }
     }//GEN-LAST:event_SubirProblemaBotonActionPerformed
-    */
+    
     /*
     private void GuardarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarBotonActionPerformed
         String nombreArchivo = NombreGuardarArchivo.getText();

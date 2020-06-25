@@ -170,8 +170,6 @@ public class Juego extends javax.swing.JDialog {
         AreaJuego.append(problema.getTablero().pintarTablero()+"\n");
         AreaJuego.setEditable(false);
         
-        
-        
     }
     /**
      * @param args the command line arguments
