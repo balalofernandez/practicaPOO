@@ -29,16 +29,17 @@ public class Tablero implements Serializable{
         for(int i=0; i<max; i++){
             columna --;
             aux += columna;
-            aux += "         ";
+            aux += "                 ";
             for(int j=0; j<max;j++){
                 
                 aux+= casillas[i][j].toString() + "       ";
                 if (casillas[i][j].toString().length()==1){
-                    aux=aux + "   ";
+                    aux+= "   ";
                 }
             }
-            aux=aux+ "\n" + "\n";
+            aux+= "\n" + "\n";
         }
+        aux+="\n                   A          B          C          D          E          F          G         H";
      return aux;
             
     }
