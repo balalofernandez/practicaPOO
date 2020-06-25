@@ -101,7 +101,7 @@ public class Usuario implements Comparable{
         Usuario usu = (Usuario) o;
         Double x = this.getPorcentageExito();
         Double y = usu.getPorcentageExito();
-        return x.compareTo(y);
+        return y.compareTo(x);
     }
     
     public boolean verSiResuelto(Problema p){

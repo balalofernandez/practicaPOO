@@ -17,9 +17,9 @@ public class ComparadorResueltos implements Comparator{
         Usuario u1 = (Usuario) o1;
         Usuario u2 = (Usuario) o2;
         if (u1.getNumProblemasResueltos() > u2.getNumProblemasResueltos())
-            return 1;
-        if (u1.getNumProblemasResueltos() < u2.getNumProblemasResueltos())
             return -1;
+        if (u1.getNumProblemasResueltos() < u2.getNumProblemasResueltos())
+            return 1;
         else 
             return 0;
     }

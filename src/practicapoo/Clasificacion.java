@@ -36,9 +36,9 @@ public class Clasificacion {
     @Override
     public String toString (){
         String texto="";
-        Integer i = 0;
+        Integer i = 1;
         for (Usuario u: clasificacion){
-           texto += i.toString()+") ";
+            texto += i.toString()+") ";
             texto += u.toString()+"\n";
             texto += "Las estadisticas del usuario son"+ "\n";
             texto += u.mostrarEstadistica();
