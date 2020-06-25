@@ -52,6 +52,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         catch (TablaNoValidaException ex) {
             UltimaOperacion.setText("Hay un tablero mal");
         }
+        this.clasificacion = new Clasificacion();
     }
         
 
@@ -416,10 +417,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         EstadisticasProblemas estadisticas = new EstadisticasProblemas(this,true,problemas,usuario);
         estadisticas.setVisible(true);
     }//GEN-LAST:event_EstadisticasProblemasBotonActionPerformed
-    
-    
+
     private void ClasificacionBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClasificacionBotonActionPerformed
-        clasificacion = new Clasificacion(usuarios);
+        clasificacion.setUsuarios(usuarios);
         ClasificacionInterfaz estadisticas = new ClasificacionInterfaz(this,true,clasificacion);
         estadisticas.setVisible(true);
     }//GEN-LAST:event_ClasificacionBotonActionPerformed

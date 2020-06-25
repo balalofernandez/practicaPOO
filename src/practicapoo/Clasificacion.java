@@ -17,9 +17,17 @@ public class Clasificacion implements Serializable{
     
     ArrayList<Usuario> clasificacion;
     
+    public Clasificacion(){
+        this.clasificacion = new ArrayList<>();
+    }
+    
     public Clasificacion(Login login){
         this.clasificacion = login.getUsuarios();
     } 
+    
+    public void setUsuarios(Login login){
+        this.clasificacion = login.getUsuarios();
+    }
     
     public void ordenadaPorcentaje(){
         Collections.sort(clasificacion);
