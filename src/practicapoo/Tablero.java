@@ -5,11 +5,13 @@
  */
 package practicapoo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author balalo
  */
-public class Tablero {
+public class Tablero implements Serializable{
     private Casilla[][] casillas;
     private final int max = 8;
     

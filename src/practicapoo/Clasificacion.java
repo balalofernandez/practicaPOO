@@ -5,6 +5,7 @@
  */
 package practicapoo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -12,7 +13,7 @@ import java.util.Collections;
  *
  * @author diego
  */
-public class Clasificacion {
+public class Clasificacion implements Serializable{
     
     ArrayList<Usuario> clasificacion;
     

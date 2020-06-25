@@ -16,13 +16,14 @@ import Piezas.Torre;
 import Piezas.Vacia;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author balalo
  */
-public class AlmacenProblemas {
+public class AlmacenProblemas implements Serializable {
     private ArrayList<Problema> problemas;
     private final int max = 8;
     

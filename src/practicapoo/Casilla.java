@@ -6,12 +6,13 @@
 package practicapoo;
 
 import Piezas.Pieza;
+import java.io.Serializable;
 
 /**
  *
  * @author balalo
  */
-public class Casilla {
+public class Casilla implements Serializable{
     private int coordenadaX;
     private char coordenadaY;
     private boolean libre;

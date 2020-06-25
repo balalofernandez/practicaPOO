@@ -256,12 +256,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
                                 .addComponent(jLabel6))
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(NombreSubirArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SubirBoton))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SubirBoton)
+                            .addComponent(NombreSubirArchivo))
+                        .addContainerGap(192, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,7 +441,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_SubirProblemaBotonActionPerformed
     
-    /*
     private void GuardarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarBotonActionPerformed
         String nombreArchivo = NombreGuardarArchivo.getText();
 //        String ultimoTramo = nombreArchivo.substring(nombreArchivo.length()-4, nombreArchivo.length());
@@ -454,7 +453,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             ObjectOutputStream Output = new ObjectOutputStream(FileEscribir);
 
 
-            Output.writeObject(sistema);
+            Output.writeObject(usuarios);
             Output.close();
             UltimaOperacion.setText("Se ha guardado el archivo correctamente");
     
@@ -463,14 +462,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
             UltimaOperacion.setText("No se ha podido guardar");
         }
     }//GEN-LAST:event_GuardarBotonActionPerformed
-    */
-    /*
+
     private void SubirBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubirBotonActionPerformed
         try{
         FileInputStream FileLeer = new FileInputStream(NombreSubirArchivo.getText());
         ObjectInputStream Input = new ObjectInputStream(FileLeer);
         
-        sistema = (Sistema) Input.readObject();
+        usuarios = (Login) Input.readObject();
         Input.close();
         UltimaOperacion.setText("Se ha subido correctamente");
         }
@@ -479,10 +477,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             UltimaOperacion.setText("El fichero no es compatible");
         }
-
-        
     }//GEN-LAST:event_SubirBotonActionPerformed
-    */
+
     /**
      * @param args the command line arguments
      */

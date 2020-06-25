@@ -5,13 +5,14 @@
  */
 package practicapoo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author balalo
  */
-public class Problema {
+public class Problema implements Serializable{
     private int resuelto_por;
     private double porcentaje_exito;
     private ArrayList<String> jugada_ganadora;//Puede haber varias soluciones

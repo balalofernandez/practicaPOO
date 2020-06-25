@@ -5,13 +5,14 @@
  */
 package practicapoo;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 /**
  *
  * @author balalo
  */
-public class ComparadorResueltos implements Comparator{
+public class ComparadorResueltos implements Comparator, Serializable{
     @Override 
     public int compare(Object o1, Object o2){
         Usuario u1 = (Usuario) o1;

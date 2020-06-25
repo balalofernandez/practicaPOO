@@ -5,6 +5,7 @@
  */
 package practicapoo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -12,7 +13,7 @@ import java.util.Iterator;
  *
  * @author balalo
  */
-public class Login {
+public class Login implements Serializable{
     private ArrayList<Usuario> usuarios;
     
     public Login(){

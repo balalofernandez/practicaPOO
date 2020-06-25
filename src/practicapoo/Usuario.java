@@ -5,13 +5,14 @@
  */
 package practicapoo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author balalo
  */
-public class Usuario implements Comparable{
+public class Usuario implements Comparable, Serializable{
     private String login;
     private String password;
     private int problemas_intentados;
