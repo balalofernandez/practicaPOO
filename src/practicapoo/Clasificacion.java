@@ -16,8 +16,8 @@ public class Clasificacion {
     
     ArrayList<Usuario> clasificacion;
     
-    public Clasificacion(){
-        this.clasificacion = new ArrayList<>();
+    public Clasificacion(Login login){
+        this.clasificacion = login.getUsuarios();
     } 
     
     public void ordenadaPorcentaje(){
